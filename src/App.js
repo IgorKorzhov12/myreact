@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import SingUpPage from "./Pages/SingUpPage";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import MainPage from "./Pages/MainPage";
+import LogIn from "./Pages/LogIn";
+import Account from "./Components/Layouts/Account";
+import {useState} from "react";
 
 function App() {
+  const [login, setLogin] = useState(false);
+
+  const auth = () => {
+    setLogin((current) => !current);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage login={login} auth={auth}/>} />
+          <Route path="account/" element={<Account/>} >
+            <Route path="singUp" element={<SingUpPage login={login} auth={auth}/>}/>
+            <Route path="logIn" element={<LogIn login={login} auth={auth}/>}/>
+          </Route>
+          {login?
+            <Route path="trainings" element={<div>Trainings</div>}/>
+          :
+            null
+          }
+          <Route path="*" element={<MainPage login={login} auth={auth}/>}/>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

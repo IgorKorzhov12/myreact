@@ -1,0 +1,18 @@
+.btnstyles {
+    color: #36636c;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 0;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.btnstyles:hover {
+    cursor: pointer;
+    opacity: 1;
+
+}
