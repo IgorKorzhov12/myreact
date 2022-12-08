@@ -15,7 +15,6 @@ function SingUpPage(props) {
 
   const changeLogin = (e) => {
     e.preventDefault();
-    console.log("login : " + login + "password : " + password);
     props.auth();
   }
 

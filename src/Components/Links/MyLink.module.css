@@ -13,3 +13,8 @@
 .link:hover {
     opacity: 1;
 }
+
+.active {
+    pointer-events: none;
+    cursor: default;
+}

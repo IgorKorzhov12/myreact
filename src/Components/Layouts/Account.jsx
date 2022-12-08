@@ -7,8 +7,8 @@ function Account() {
     <div className={classes.container}>
       <form className={classes.styles}>
         <div className={classes.containerForLink}>
-          <LoginLink href="logIn">log in</LoginLink>
           <LoginLink href="singUp">sign up</LoginLink>
+          <LoginLink href="logIn">log in</LoginLink>
         </div>
         <Outlet/>
       </form>

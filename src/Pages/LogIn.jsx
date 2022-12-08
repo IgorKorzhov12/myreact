@@ -13,12 +13,12 @@ function LogIn(props) {
 
   const changeLogin = (e) => {
     e.preventDefault();
-    console.log("login : " + login + "password : " + password);
     props.auth();
   }
 
   useEffect(() => {
     props.login && navigate("/");
+
   },[props.login]);
 
   return (
@@ -33,7 +33,7 @@ function LogIn(props) {
       </div>
       <MyInput value={password} setValue={setPassword}
         id="password" type="text" placeholder="MyPassword1234"/>
-      <div style={{marginTop: 40 + 'px'}}>
+      <div>
         <MyButton onClick = {changeLogin}>LogIn</MyButton>
       </div>
     </>

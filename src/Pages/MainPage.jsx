@@ -1,9 +1,9 @@
-import Navbar from "../Components/Navbar/Navbar";
+import MySlider from "../Components/Slider/Carousel";
 
-function MainPage(props) {
+function MainPage() {
   return (
     <div>
-      <Navbar login={props.login} auth={props.auth}/>
+      <MySlider />
     </div>
   );
 }
