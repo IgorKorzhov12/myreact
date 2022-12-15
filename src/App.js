@@ -11,11 +11,12 @@ import CurrentProgram from "./Pages/CurrentProgram";
 import Exercises from "./Pages/Exercises";
 import Results from "./Pages/Results";
 import AddExercise from "./Pages/AddExercise";
+import PageWithChart from "./Pages/PageWithChart";
 
 function App() {
 
   let ListOfexercises = [
-    [ "2014-2-12", "arms", "Поднятие штанги стоя", "3", "23"],
+    ["2014-2-12", "arms", "Поднятие штанги стоя", "3", "23"],
     [ "2018-12-11", "legs", "Присидания", "2", "100"],
     [ "2022-5-12", "back", "Подтягивания", "1", "-"],
     [ "2002-2-2", "back", "Тяга", "5", "150"],
@@ -55,6 +56,7 @@ function App() {
                 <Route path="Results/addExercise" element={<AddExercise
                                                 setExercises={setExercises}
                                                 ListOfexercises={ListOfexercises}/>}/>}/>
+                <Route path="MyChart" element={<PageWithChart />}/>
               </>
               :
               <Route path="account/" element={<Account/>} >

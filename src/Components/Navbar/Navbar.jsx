@@ -16,7 +16,10 @@ function Navbar(props) {
           <MyLink href="">Main Page</MyLink>
           {
             props.login ?
-              <MyLink href="results">Results</MyLink>
+              <>
+                <MyLink href="results">Results</MyLink>
+                <MyLink href="MyChart">MyChart</MyLink>
+              </>
               :
               null
           }
