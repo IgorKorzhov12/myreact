@@ -15,6 +15,7 @@
 }
 
 .active {
+    border-bottom: 3px solid #eeeeee;
     pointer-events: none;
     cursor: default;
 }

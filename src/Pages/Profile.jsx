@@ -28,7 +28,7 @@ function Profile(props) {
     <div>
       <div className={classes.container}>
         <div>
-          <MyLabel style="black" for="nick">Nick name</MyLabel>
+          <MyLabel style="black" for="nick"></MyLabel>
         </div>
         <MyInput
           value={nickName} setValue={setNickName}

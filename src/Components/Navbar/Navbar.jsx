@@ -13,7 +13,13 @@ function Navbar(props) {
           <h2 className={classes.header}>YourTrainer</h2>
           <MyLink href="exercises">Exercises</MyLink>
           <MyLink href="programs">Programs</MyLink>
-          <MyLink href="results">Results</MyLink>
+          <MyLink href="">Main Page</MyLink>
+          {
+            props.login ?
+              <MyLink href="results">Results</MyLink>
+              :
+              null
+          }
         </div>
         <div className={classes.block}>
           {props.login ?

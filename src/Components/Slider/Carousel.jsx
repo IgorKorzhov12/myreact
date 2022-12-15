@@ -1,5 +1,4 @@
 import Slider from 'react-slick'
-
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import {useState} from "react";
@@ -8,7 +7,7 @@ import p1 from "../../Images/1.jpg"
 import p2 from "../../Images/2.jpg"
 import p3 from "../../Images/3.jpg"
 import p4 from "../../Images/4.jpg"
-
+import LoginLink from "../Links/LoginLink";
 export default function Carousel() {
 
   const [sliderRef, setSliderRef] = useState(null);
@@ -23,24 +22,28 @@ export default function Carousel() {
 
   const hotelCards = [
     {
+      id: "1",
       imageSrc: p1,
       title: 'Тренировка дома',
       description: 'Готовая программа тренировок для дома',
       features: ['Большой набор упражнений', 'Описание к ним', 'Рекомендации по питанию'],
     },
     {
+      id: "2",
       imageSrc: p2,
       title: 'Лучшие кардио упражнения',
       description: 'Сборник лучших кардио упражнений',
       features: ['Большой набор упражнений', 'Описание к ним', 'Рекомендации о времени выполнения'],
     },
     {
+      id: "3",
       imageSrc: p3,
       title: 'Лучшие упражнения для развития гибкости',
       description: 'Сборник лучших упражнений для растяжки',
       features: ['Большой набор упражнений', 'Описание к ним', 'Рекомендации о времени выполнения'],
     },
     {
+      id: "4",
       imageSrc: p4,
       title: 'Лучшие упражнения для рук',
       description: 'Сборник лучших упражнений для рук',
@@ -77,7 +80,7 @@ export default function Carousel() {
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
-                  <button>Buy Now</button>
+                  <LoginLink style="dark" href={card.id}>Читать</LoginLink>
                 </div>
               </div>
             </div>
